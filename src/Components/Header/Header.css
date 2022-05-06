@@ -1,0 +1,26 @@
+
+
+.content-header a{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff!important;
+    text-decoration: none;
+    background: none!important;
+
+}
+@media (max-width: 575px) {
+    .content-header a{
+        font-size: 25px;
+    }
+}
+.content-header{
+    border-bottom: 1px solid #898989;
+    z-index:3;
+    background: #574e64;
+    width: 100%;
+}
+.icon-video{
+    font-size: 65px;
+    padding-left: 21px;
+
+}

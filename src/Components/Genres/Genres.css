@@ -1,0 +1,14 @@
+
+
+
+.genres-span{
+    background: #736a81;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.genres-span:hover{
+    background: #c4194b;
+}

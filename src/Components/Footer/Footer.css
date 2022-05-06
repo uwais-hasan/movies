@@ -1,0 +1,38 @@
+
+.footer-link {
+    gap: 125px;
+    background: #898989;
+    padding: 20px ;
+}
+.pointer {
+cursor: pointer;
+
+}
+
+@media (min-width: 578px)and (max-width: 767px) {
+    .footer-link{
+        gap: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-link{
+        gap: 5px;
+    }
+}
+
+
+.footer-link a{
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+
+}
+svg{
+    transition: .3s ease-in-out;
+}
+.pointer:hover svg{
+
+    color: red!important;
+
+}
