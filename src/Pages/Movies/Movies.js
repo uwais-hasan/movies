@@ -25,8 +25,14 @@ const Movies=()=>{
 
         FetchMovies()
     },[pageMovies,urlGenres])
-    console.log(movies)
-    console.log(ControllerWithGenres(selectedGenres))
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    },[pageMovies])
+
+
     return(
        <div>
        <Genres
@@ -52,7 +58,7 @@ const Movies=()=>{
                        />
                    )
                })}
-               <Pagination page={pageMovies} setPage={setPageMovies} totalPages={totalPages} />
+               <Pagination  page={pageMovies} setPage={setPageMovies} totalPages={totalPages} />
            </div>
        </div>
     )

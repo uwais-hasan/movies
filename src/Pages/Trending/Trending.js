@@ -3,9 +3,17 @@ import './Trending.css'
 
 import Pagination from "../../Components/Pagination/Pagination";
 import ViewTrending from "../../Components/viewTrending/viewTrending";
+import {useEffect} from "react";
 
 
 const Trending=({trending,page,setPage,totalPages})=>{
+
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    },[page])
     return(
        <div className='content-Trending mt-5 mb-5'>
                <div className='d-flex flex-wrap gap-1 justify-content-center align-items-center '>

@@ -29,11 +29,12 @@ function App() {
 
 
     }, [page]);
-
+    const env=process.env.REACT_APP_APP_URL;
 
   return (
       <BrowserRouter>
           <div className='content-App'>
+              <p style={{color:'red'}}>{env}</p>
               <Header/>
 
               <div className='container'>

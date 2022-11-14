@@ -9,6 +9,7 @@ const ViewTrending=({id,media,img,title,vote,date,keys})=>{
         // height:'320px',
 
     }
+    console.log(vote.toString().slice(0,3))
     return(
         <Details  id={id} media={media}  >
             <div  className='content-img'>
@@ -21,7 +22,7 @@ const ViewTrending=({id,media,img,title,vote,date,keys})=>{
                 <p  className='text-white'>{media}</p>
                 <p className='text-white'>{date}</p>
             </div>
-            <p className='vote position-absolute top-0'>{vote}</p>
+            <p className='vote position-absolute top-0'>{vote.toString().slice(0,3)}</p>
         </Details>
 
     )
