@@ -1,7 +1,7 @@
 
 import './App.css';
 import {useEffect, useState} from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css'
 import Movies from "./Pages/Movies/Movies";
 import Trending from "./Pages/Trending/Trending";
@@ -32,7 +32,7 @@ function App() {
     const env=process.env.REACT_APP_APP_URL;
 
   return (
-      <BrowserRouter>
+      <HashRouter>
           <div className='content-App'>
               <p style={{color:'red'}}>{env}</p>
               <Header/>
@@ -49,7 +49,7 @@ function App() {
               </div>
               <Footer/>
           </div>
-      </BrowserRouter>
+      </HashRouter>
   );
 }
 
