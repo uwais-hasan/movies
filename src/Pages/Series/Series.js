@@ -23,6 +23,12 @@ const Series=()=>{
 
         FetchMovies()
     },[pageMovies,urlGenres])
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    },[pageMovies])
     // console.log(movies)
     return(
         <div>
