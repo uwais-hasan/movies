@@ -34,7 +34,7 @@ const Movies=()=>{
 
 
     return(
-       <div>
+       <div className=''>
        <Genres
            selectedGenres={selectedGenres}
            setSelectedGenres={setSelectedGenres}
