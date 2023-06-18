@@ -39,7 +39,7 @@ function App() {
 
               <div className='container'>
 
-                  <Routes>
+                  <Routes basename={'/'}>
                       <Route exact path='/' element={<Trending trending={trending} page={page} setPage={setPage} totalPages={totalPages}/>}/>
                       <Route exact path='/series' element={<Series/>}/>
                       <Route exact path='/movies' element={<Movies/>}/>

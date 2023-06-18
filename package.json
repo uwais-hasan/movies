@@ -1,6 +1,6 @@
 {
   "name": "movies-app",
-  "homepage ": "https://owies-hassan.github.io/movies",
+  "homepage ": "https://owies-hassan.github.io/movies/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
