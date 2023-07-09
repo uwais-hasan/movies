@@ -10,7 +10,7 @@ const Header=()=>{
     return(
      <div className='content-header '>
       <div className='container'>
-          <div className='d-flex justify-content-center pt-5'>
+          <div className='d-flex justify-content-center pt-5 align-items-center'>
              <NavLink to='/'>Movies Owies hassan</NavLink>
               <FontAwesomeIcon className='icon-video' icon={faVideo} size="lg"/>
           </div>

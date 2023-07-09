@@ -16,7 +16,7 @@ const ViewTrending=({id,media,img,title,vote,date,keys})=>{
                 <img style={styledImg} src={img ? `${img_size}${img}`:img_undefined} alt={title}/>
             </div>
             <div className='content-title text-center'>
-                <p className>{title.split(' ').slice(0,4).join(' ')}</p>
+                <p className>{title.split(' ').slice(0,3).join(' ')}</p>
             </div>
             <div className='content-info d-flex justify-content-around'>
                 <p  className='text-white'>{media}</p>

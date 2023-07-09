@@ -41,11 +41,26 @@ const Search = () => {
             },
 
         },
+        components: {
+            MuiTabList: {
+                    root: {
+                        backgroundColor: '#f0f0f0',
+
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        width:'100%'
+
+                    },
+
+            },
+
+        },
     })
     return (
+        <ThemeProvider theme={theme}>
         <div className='content-search d-flex flex-column mt-5'>
             <div className='input-search d-flex'>
-                <ThemeProvider theme={theme}>
+
                     <TextField
                         style={{flex: 1}}
                         className='searchBox'
@@ -53,13 +68,13 @@ const Search = () => {
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <Button onClick={fetchSearch} variant='outlined'>search</Button>
-                </ThemeProvider>
+
             </div>
             <div className='result-search d-flex justify-content-center'>
                 <Box sx={{width: '100%', typography: 'body1'}}>
                     <TabContext value={type}>
-                        <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
-                            <TabList style={{display: 'flex', justifyContent: 'space-around'}}
+                        <Box className='flex-table' >
+                            <TabList
                                      aria-label="lab API tabs example" onChange={(event, newValue) => {
                                 setType(newValue);
 
@@ -93,6 +108,7 @@ const Search = () => {
 
             )}
         </div>
+        </ThemeProvider>
     )
 }
 export default Search

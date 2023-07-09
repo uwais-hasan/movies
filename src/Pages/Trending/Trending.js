@@ -14,9 +14,10 @@ const Trending=({trending,page,setPage,totalPages})=>{
             behavior: "smooth",
         });
     },[page])
+
     return(
        <div className='content-Trending mt-5 mb-5'>
-               <div className='d-flex flex-wrap gap-1 justify-content-center align-items-center '>
+               <div className='d-flex flex-wrap gap-1 justify-content-center align-items-center   '>
                {trending.map(item => {
                    return (
                        <ViewTrending

@@ -34,7 +34,7 @@ function App() {
   return (
       <HashRouter>
           <div className='content-App'>
-              <p style={{color:'red'}}>{env}</p>
+
               <Header/>
 
               <div className='container'>
