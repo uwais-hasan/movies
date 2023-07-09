@@ -21,7 +21,7 @@ const Carousel=({id,media})=>{
         personsFun();
     },[]);
 
-    console.log(person)
+
  return(
      <Swiper
 

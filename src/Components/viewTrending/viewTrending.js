@@ -9,7 +9,7 @@ const ViewTrending=({id,media,img,title,vote,date,keys})=>{
         // height:'320px',
 
     }
-    console.log(vote.toString().slice(0,3))
+
     return(
         <Details  id={id} media={media}  >
             <div  className='content-img'>

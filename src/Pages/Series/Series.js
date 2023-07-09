@@ -13,7 +13,7 @@ const Series=()=>{
     const [selectedGenres, setSelectedGenres] = useState([]);
     const urlGenres=ControllerWithGenres(selectedGenres);
     const FetchMovies=async ()=>{
-        const fetchMovies=await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=801ba50f957f0f9e83c96ce7332f7941&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageMovies}&with_genres=${urlGenres}`)
+        const fetchMovies=await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageMovies}&with_genres=${urlGenres}`)
         const res=await fetchMovies.json()
         setMoives(res.results)
         setTotalPages(res.total_pages)
@@ -29,7 +29,7 @@ const Series=()=>{
             behavior: "smooth",
         });
     },[pageMovies])
-    // console.log(movies)
+
     return(
         <div>
             <Genres

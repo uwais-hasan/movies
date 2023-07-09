@@ -6,7 +6,7 @@ const Genres=({ selectedGenres, setSelectedGenres, genres, setGenres,setTotalPag
 
 const[selectClass,setSelectedClass]=useState('')
     const fetchGenres=async ()=>{
-        const {data}=await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=801ba50f957f0f9e83c96ce7332f7941&language=en-US`);
+        const {data}=await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_KEY}&language=en-US`);
         setGenres(data.genres);
 
     }

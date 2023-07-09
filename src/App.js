@@ -17,11 +17,11 @@ function App() {
     const[totalPages,setTotalPages]=useState(null)
 
     const fetchTrending=async ()=>{
-        const fetchTrending=await fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=801ba50f957f0f9e83c96ce7332f7941&page=${page}`);
+        const fetchTrending=await fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_KEY}&page=${page}`);
         const response=await fetchTrending.json();
         setTrending(response.results);
        setTotalPages(response.total_pages)
-        console.log(response)
+
     }
 
     useEffect(() => {
@@ -29,10 +29,12 @@ function App() {
 
 
     }, [page]);
-    const env=process.env.REACT_APP_APP_URL;
+
+
 
   return (
       <HashRouter>
+
           <div className='content-App'>
 
               <Header/>

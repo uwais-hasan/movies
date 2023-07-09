@@ -40,16 +40,16 @@ export default function Details({children,media,id}) {
     const[video,setVideo]=useState();
     const handleOpen = () => {
         setOpen(true);
-        console.log(video)
+
     };
     const handleClose = () => setOpen(false);
     const fetchData=async()=>{
-        const {data}=await axios.get(`https://api.themoviedb.org/3/${media && media}/${id && id }?api_key=801ba50f957f0f9e83c96ce7332f7941&language=en-US`)
+        const {data}=await axios.get(`https://api.themoviedb.org/3/${media && media}/${id && id }?api_key=${process.env.REACT_APP_KEY}&language=en-US`)
         setContent(data)
     }
 
     const fetchVideo=async()=>{
-        const data=await fetch(`  https://api.themoviedb.org/3/${media && media}/${id && id}/videos?api_key=801ba50f957f0f9e83c96ce7332f7941&language=en-US`)
+        const data=await fetch(`  https://api.themoviedb.org/3/${media && media}/${id && id}/videos?api_key=${process.env.REACT_APP_KEY}&language=en-US`)
         const res=await data.json();
         setVideo(res.results[0]?.key)
 
