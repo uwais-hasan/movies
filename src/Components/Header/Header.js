@@ -11,7 +11,7 @@ const Header=()=>{
      <div className='content-header '>
       <div className='container'>
           <div className='d-flex justify-content-center pt-5 align-items-center'>
-             <NavLink to='/'>Movies Owies hassan</NavLink>
+             <NavLink to='/'>Movies Uwais hasan</NavLink>
               <FontAwesomeIcon className='icon-video' icon={faVideo} size="lg"/>
           </div>
 
